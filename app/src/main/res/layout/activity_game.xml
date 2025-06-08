@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <!-- Nagłówek z informacjami -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Punkty: 0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Czas: 60s"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+    <!-- Wzorzec do naśladowania -->
+    <TextView
+        android:id="@+id/tv_pattern"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Znajdź: Czerwony"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#FF0000"
+        android:layout_marginBottom="30dp"
+        android:elevation="4dp" />
+
+    <!-- Instrukcja -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kliknij w pole z odpowiednim kolorem!"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Plansza gry - dodany padding i wyśrodkowanie -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <GridLayout
+            android:id="@+id/game_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="20dp"
+            android:background="#ffffff"
+            android:elevation="2dp" />
+
+    </FrameLayout>
+
+    <!-- Przycisk powrotu -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powrót do menu"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="finish" />
+
+</LinearLayout>
